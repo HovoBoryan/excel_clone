@@ -36,7 +36,7 @@ class SpreadSheet {
     getCellAt(num1, num2) {
         if(num1 < 0 || num2 < 0)
          {
-            console.log("Please enter 0 or numbers greater then 0 !!!..");
+            console.log("Please enter 0 or numbers greater then 0 !!!...");
          } 
             else
          {

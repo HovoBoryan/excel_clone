@@ -66,8 +66,9 @@ function testReset() {
 }
 
 function TestSetCellAt() {
-    const ExampleSpread = new SpreadSheet(4, 4);
-    //const cell = new Cell();
+    const cell = new Cell();
+    const ExampleSpread = new SpreadSheet(4, 4, cell);
+    //
     //cell.setValue("World");
     ExampleSpread.setCellAt(0, 0, "Hello");
    // ExampleSpread.setCellAt(3, 3, cell);

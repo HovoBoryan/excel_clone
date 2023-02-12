@@ -2,8 +2,9 @@ const Cell = require("./Cell");
 
 class SpreadSheet {
     #Cells = []
-    constructor(row, col) {
-    
+    constructor(row, col, cell) {
+       this.cell = new Cell();
+
         if(row <= 0 || col <= 0)
         {
             console.log("Please enter  numbers greater then 0 !!!..");
@@ -21,8 +22,8 @@ class SpreadSheet {
          } 
             else if(typeof value === "string") 
          {
-            const cell = new Cell().setValue(value);
-            this.#Cells[num1][num2] = cell.getValue();
+            this.cell.setValue(value);
+            this.#Cells[num1][num2] = this.cell.getValue();
          }
             else
          {

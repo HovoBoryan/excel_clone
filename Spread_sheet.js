@@ -51,19 +51,18 @@ class SpreadSheet {
         let row = this.#Cells.length;
         let col = this.#Cells[0].length;
         const newspreadSheet = new SpreadSheet(row +1, col );
-        const cell = new Cell();
+       // const cell = new Cell();
 
         for(let i = 0; i < row + 1; i++ ){
             for(let j = 0; j < col; j++)
             {
-                if(i === row) 
+                if(i === num) 
                 { 
-                    newspreadSheet.setCellAt(i, j, '');
                     continue; 
                 }
-                    let value  = this.getCellAt(i, j);
-                    newspreadSheet.setCellAt(i, j) = value;
-
+                  let value = this.getCellAt(i, j);
+                   newspreadSheet.setCellAt(i, j, value);
+                    
             }
             return newspreadSheet;
     }

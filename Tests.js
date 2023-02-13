@@ -68,11 +68,9 @@ function testReset() {
 function TestSetCellAt() {
     const cell = new Cell();
     const ExampleSpread = new SpreadSheet(4, 4, cell);
-    //
-    //cell.setValue("World");
     ExampleSpread.setCellAt(0, 0, "Hello");
-   // ExampleSpread.setCellAt(3, 3, cell);
-    if(ExampleSpread.getCellAt(0, 0) !== "Hello"   ) {
+    ExampleSpread.setCellAt(3, 3, "World");
+    if(ExampleSpread.getCellAt(0, 0) !== "Hello" && ExampleSpread.getCellAt(3, 3) !== "World") {
         console.log("Test SetCellAt() failed !!!");
     } else {
         console.log("Test SetCellAt() passed ");
@@ -80,9 +78,21 @@ function TestSetCellAt() {
     
 }
 
-function testchangeColor() {
 
+function TestAddRow() {
+    const cell = new Cell();
+    const ExampleSpread = new SpreadSheet(3, 3, cell);
+    ExampleSpread.setCellAt(1, 1, "Hello");
+    ExampleSpread.setCellAt(2, 2, "World")
+    ExampleSpread.addRow(1);
+    ExampleSpread.setCellAt(2, 2, "check line" );
+    if(ExampleSpread.getCellAt(2, 2) !== "check line" && ExampleSpread.getCellAt(3, 3) !== "World" && ExampleSpread.length !== 4) {
+        console.log("Test addRow() failed !!!..");
+    } else {
+        console.log("Test addRow() passed ");
+    }
 }
+
 
 
 
@@ -111,5 +121,5 @@ TestSetCellAt()
 */
 
 //TestAllTests();
-TestSetCellAt()
+TestAddRow();
 

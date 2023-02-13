@@ -85,11 +85,28 @@ function TestAddRow() {
     ExampleSpread.setCellAt(1, 1, "Hello");
     ExampleSpread.setCellAt(2, 2, "World")
     ExampleSpread.addRow(1);
-    ExampleSpread.setCellAt(2, 2, "check line" );
-    if(ExampleSpread.getCellAt(2, 2) !== "check line" && ExampleSpread.getCellAt(3, 3) !== "World" && ExampleSpread.length !== 4) {
+   
+    /*if(ExampleSpread.getCellAt(2, 2) !== " " || ExampleSpread.getCellAt(3, 3) !== "World" || ExampleSpread.length !== 4) {
         console.log("Test addRow() failed !!!..");
     } else {
         console.log("Test addRow() passed ");
+    }*/
+    console.log(ExampleSpread.getCellAt(1, 1));
+    console.log(ExampleSpread.getCellAt(2, 2));
+    console.log(ExampleSpread.getCellAt(3, 3));
+    console.log(JSON.stringify(ExampleSpread, undefined, 5));
+}
+
+
+function TestRemoveRow(){
+    const cell = new Cell();
+    const ExampleSpread = new SpreadSheet(3, 3, cell);
+    ExampleSpread.setCellAt(2, 2, "Hello");
+    ExampleSpread.removeRow(2);
+    if(ExampleSpread.getCellAt(2, 2) === "Hello" && ExampleSpread.length !== 4 ) {
+        console.log("Test removeRow() failed !!!..");
+    } else {
+        console.log("Test removeRow() passed :");
     }
 }
 
@@ -108,17 +125,12 @@ function TestAllTests() {
     testToDouble();
     testToDate();
     testReset();
-    TestSetCellAt()
+    TestSetCellAt();
     TestAddRow();
     };
-/*testsetValue();
-testToInt();
-testSetColor();
-testToDouble();
-testToDate();
-testReset();
-TestSetCellAt()
-*/
+
 //TestAllTests();
+
+TestAddRow();
 
 

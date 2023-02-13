@@ -47,25 +47,26 @@ class SpreadSheet {
 
 
     addRow(num) {
-
         let row = this.#Cells.length;
         let col = this.#Cells[0].length;
         const newspreadSheet = new SpreadSheet(row +1, col );
-       // const cell = new Cell();
-
-        for(let i = 0; i < row + 1; i++ ){
-            for(let j = 0; j < col; j++)
-            {
-                if(i === num) 
-                { 
-                    continue; 
-                }
-                  let value = this.getCellAt(i, j);
-                   newspreadSheet.setCellAt(i, j, value);
-                    
+      for(let i = 0; i < row + 1; i++) {
+         for(let j = 0; j < col; j++) {
+            if(i === num) {
+               newspreadSheet.setCellAt(i, j, ' ');
+            } else {
+               let value;
+                value = this.#Cells.getCellAt(i -1, j - 1);
+               newspreadSheet.setCellAt(i, j, value);
             }
-            return newspreadSheet;
-    }
+         }  return newspreadSheet;
+      }
+        
+                  
+          
+                    
+            return newspreadSheet.length;
+    
 }   
 
     removeRow(num) {

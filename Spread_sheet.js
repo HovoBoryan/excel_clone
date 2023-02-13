@@ -45,23 +45,23 @@ class SpreadSheet {
          }
     }
 
-    changeColor(num1, num2, color) {
-        this.#Cells[num1][num2].setColor(color);
-    }
 
-    addRow(row) {
+    addRow(num) {
+
         let col = this.length;
         const newspreadSheet = new SpreadSheet(row +1, col );
+        const cell = new Cell();
 
         for(let i = 0; i < row + 1; i++ ){
             for(let j = 0; j < col; j++)
             {
                 if(i === row) 
                 { 
-                    newspreadSheet[i][j] = '';
+                    newspreadSheet.setCellAt(i, j, '');
                     continue; 
                 }
-                    newspreadSheet[i][j] = this.getCellAt(i, j);
+                    let value  = this.getCellAt(i, j);
+                    newspreadSheet.setCellAt(i, j) = value;
 
             }
             return newspreadSheet;

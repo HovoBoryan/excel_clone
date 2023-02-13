@@ -48,7 +48,8 @@ class SpreadSheet {
 
     addRow(num) {
 
-        let col = this.length;
+        let row = this.#Cells.length;
+        let col = this.#Cells[0].length;
         const newspreadSheet = new SpreadSheet(row +1, col );
         const cell = new Cell();
 

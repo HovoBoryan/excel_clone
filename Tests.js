@@ -109,7 +109,7 @@ function TestAllTests() {
     testToDate();
     testReset();
     TestSetCellAt()
-    
+    TestAddRow();
     };
 /*testsetValue();
 testToInt();
@@ -119,7 +119,6 @@ testToDate();
 testReset();
 TestSetCellAt()
 */
-
 //TestAllTests();
-TestAddRow();
+
 

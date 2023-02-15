@@ -3,8 +3,7 @@ const Cell = require("./Cell");
 class SpreadSheet {
     #Cells = []
     constructor(row, col, cell) {
-       this.cell = new Cell();
-
+      this.cell = new Cell();
         if(row <= 0 || col <= 0)
         {
             console.log("Please enter  numbers greater then 0 !!!..");
@@ -13,11 +12,11 @@ class SpreadSheet {
         for(let i = 0; i < row; i++) {
            this.#Cells[i] = new Array(col);   
         }
-        for(let i = 0; i < row; i++) {
+       /* for(let i = 0; i < row; i++) {
             for(let j = 0; j < col; j++) {
                this.#Cells[i][j] = cell;
          }  
-       }
+       }*/
     }
 }
     setCellAt(num1, num2, value) {
@@ -25,15 +24,10 @@ class SpreadSheet {
          {
             console.log("Please enter 0 or numbers greater then 0 !!!..");
          } 
-            else if(typeof value === "string") 
-         {
+          
             this.cell.setValue(value);
             this.#Cells[num1][num2] = this.cell.getValue();
-         }
-            else
-         {
-            this.#Cells[num1][num2] = value;
-         }
+        
     }
 
 
@@ -63,6 +57,9 @@ class SpreadSheet {
 
 
     removeRow(num) {
+         if(num < 0) {
+            console.log("please enter  0 or number greater  0  ");
+         }
          this.#Cells.splice(num, 1);
     }
 

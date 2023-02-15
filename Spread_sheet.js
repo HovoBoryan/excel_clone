@@ -123,7 +123,7 @@ class SpreadSheet {
         for(let i = 0; i < row; i++) {
             let swapper = this.#Cells[i][num1];
             this.#Cells[i][num1] = this.#Cells[i][num2];
-            this.#Cells[i][num2] = swapper;
+            swapColumnsthis.#Cells[i][num2] = swapper;
          }
       }
    }

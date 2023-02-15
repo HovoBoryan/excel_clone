@@ -62,9 +62,8 @@ class SpreadSheet {
       }
 
 
-
     removeRow(num) {
-
+         this.#Cells.splice(num, 1);
     }
 
     addColumn(num) {

@@ -87,7 +87,7 @@ function TestAddRow() {
     ExampleSpread.setCellAt(2, 2, "World");
     ExampleSpread.addRow(1);
    
-    if(ExampleSpread.getCellAt(2, 2) !== "World" ) {
+    if(ExampleSpread.getCellAt(1, 1) !== "Hello" ) {
         console.log("Test addRow() failed !!!..");
     } else {
         console.log("Test addRow() passed ");

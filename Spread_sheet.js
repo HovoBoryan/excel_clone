@@ -47,7 +47,7 @@ class SpreadSheet {
 
     addRow(num) {
       if(num < 0) {
-         console.log("Please enter number 0 or greater then 0");
+         console.log("Please enter number 0 or greater then !!!.... ");
       } else {
         let col = this.#Cells[0].length;
         const cell = new Cell();
@@ -65,11 +65,19 @@ class SpreadSheet {
             console.log("please enter  0 or number greater  0  ");
          }
          this.#Cells.splice(num, 1);
-    }
+   }
 
     addColumn(num) {
-
-    }
+      if(num < 0) {
+      console.log("Please enter number 0 or greater then !!!!.. ");
+      } else {
+         const addcolumncell = new Cell();
+         let row = this.#Cells.length;
+         for(let i = 0; i < row; i++) {     
+         this.#Cells[i].splice(num +1, 0, addcolumncell);
+         }
+      }
+   }
 
     removeColumn(num) {
 

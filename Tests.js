@@ -95,16 +95,15 @@ function TestAddRow() {
 function TestRemoveRow(){
     const cell = new Cell();
     const ExampleSpread = new SpreadSheet(3, 3, cell);
-    ExampleSpread.setCellAt(1, 1, "Start");
-    ExampleSpread.setCellAt(2, 2, "Hello");
-    ExampleSpread.setCellAt(3, 3, "World");
-
-    ExampleSpread.removeRow(2);
-    if(ExampleSpread.getCellAt(2, 3) === "World" ) {
+    ExampleSpread.setCellAt(1, 1, "Hello");
+    ExampleSpread.setCellAt(2, 2, "World");
+    ExampleSpread.removeRow(1);
+    if(ExampleSpread.getCellAt(1, 2) !== "World" ) {
         console.log("Test removeRow() failed !!!..");
     } else {
-        console.log("Test removeRow() passed :");
+        console.log("Test removeRow() passed ");
     }
+    
 }
 
 
@@ -124,10 +123,10 @@ function TestAllTests() {
     testReset();
     TestSetCellAt();
     TestAddRow();
+    TestRemoveRow();
     };
 
-//TestAllTests();
-
-TestRemoveRow();
+TestAllTests();
+//TestRemoveRow();
 
 

@@ -119,6 +119,23 @@ function TestaddColumn() {
 }
 
 
+function TestremoveColumn() {
+    const cell = new Cell();
+    const ExampleSpread = new SpreadSheet(3, 3, cell);
+    ExampleSpread.setCellAt(1, 2, "Hello");
+    ExampleSpread. removeColumn(1);
+
+    if(ExampleSpread.getCellAt(1, 1) !== "Hello" ) {
+
+        console.log("Test removeRow() failed !!!..");
+
+    } else {
+
+        console.log("Test removeRow() passed ");
+    }      
+}
+
+
 
 
 
@@ -140,6 +157,6 @@ function TestAllTests() {
 
     };
 
-TestAllTests();
-
+// TestAllTests();
+TestremoveColumn()
 

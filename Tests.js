@@ -16,9 +16,9 @@ function testsetValue() {
 function testToInt() {
     const c = new Cell();
     c.setValue("77");
-    if(c.toInt() !== 77) {
+        if(c.toInt() !== 77) {
         console.log("Test toInt() failed !!!");
-    } else {
+        } else {
         console.log("Test toInt() passed");
     }
 }
@@ -161,9 +161,7 @@ function TestswapColumns() {
     }
 }
 
-
 function TestAllTests() {
-
     testsetValue();
     testToInt();
     testSetColor();

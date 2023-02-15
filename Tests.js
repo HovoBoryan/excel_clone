@@ -91,7 +91,6 @@ function TestAddRow() {
     }
 }
 
-
 function TestRemoveRow(){
     const cell = new Cell();
     const ExampleSpread = new SpreadSheet(3, 3, cell);

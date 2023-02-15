@@ -46,13 +46,17 @@ class SpreadSheet {
 
 
     addRow(num) {
+      if(num < 0) {
+         console.log("Please enter number 0 or greater then 0");
+      } else {
         let col = this.#Cells[0].length;
         const cell = new Cell();
         const addLine = [col];
-        for(let i = 0; i < col; i++) {
-         addLine[i] = cell;
-      }
+          for(let i = 0; i < col; i++) {
+               addLine[i] = cell;
+            }
              this.#Cells.splice(num + 1 , 0, addLine );
+         }
       }
 
 

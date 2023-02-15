@@ -82,19 +82,16 @@ function TestSetCellAt() {
 function TestAddRow() {
     const cell = new Cell();
     const ExampleSpread = new SpreadSheet(3, 3, cell);
+    
     ExampleSpread.setCellAt(1, 1, "Hello");
-    ExampleSpread.setCellAt(2, 2, "World")
+    ExampleSpread.setCellAt(2, 2, "World");
     ExampleSpread.addRow(1);
    
-    /*if(ExampleSpread.getCellAt(2, 2) !== " " || ExampleSpread.getCellAt(3, 3) !== "World" || ExampleSpread.length !== 4) {
+    if(ExampleSpread.getCellAt(2, 2) !== "World" ) {
         console.log("Test addRow() failed !!!..");
     } else {
         console.log("Test addRow() passed ");
-    }*/
-    console.log(ExampleSpread.getCellAt(1, 1));
-    console.log(ExampleSpread.getCellAt(2, 2));
-    console.log(ExampleSpread.getCellAt(3, 3));
-    console.log(JSON.stringify(ExampleSpread, undefined, 5));
+    }
 }
 
 

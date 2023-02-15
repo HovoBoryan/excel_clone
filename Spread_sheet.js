@@ -80,7 +80,14 @@ class SpreadSheet {
    }
 
     removeColumn(num) {
-
+      if(num < 0) {
+         console.log("Please enter number 0 or greater then !!!!.. ");
+      } else {
+         let row = this.#Cells.length;
+         for(let i = 0; i < row; i++) {     
+         this.#Cells[i].splice(num , 1); 
+      }
+   }
     }
     swapRows(num1, num2) {
 

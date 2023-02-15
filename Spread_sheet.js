@@ -118,12 +118,15 @@ class SpreadSheet {
          console.log("Please enter number 0 or greater then !!!!.. ");
 
       } else {
-         const swapper = this.#Cells[num1];
-         this.#Cells[num1] = this.#Cells[num2];
-         this.#Cells[num2] = swapper;
-      }
 
-    }
+        let row = this.#Cells.length; 
+        for(let i = 0; i < row; i++) {
+            let swapper = this.#Cells[i][num1];
+            this.#Cells[i][num1] = this.#Cells[i][num2];
+            this.#Cells[i][num2] = swapper;
+         }
+      }
+   }
 
 }
 module.exports = SpreadSheet

@@ -162,10 +162,6 @@ function TestswapColumns() {
 }
 
 
-
-
-
-
 function TestAllTests() {
 
     testsetValue();
@@ -179,9 +175,10 @@ function TestAllTests() {
     TestRemoveRow();
     TestaddColumn();
     TestremoveColumn()
-
+    TestswapRows();
+    TestswapColumns()
     };
 
-// TestAllTests();
-TestswapRows();
+ TestAllTests();
+
 

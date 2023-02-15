@@ -148,7 +148,18 @@ function TestswapRows() {
     }
 }
 
-
+function TestswapColumns() {
+    const cell = new Cell();
+    const ExampleSpread = new SpreadSheet(4, 4, cell);
+    ExampleSpread.setCellAt(1, 2, "Hello");
+    ExampleSpread.setCellAt(1, 3, "World");
+    ExampleSpread.swapColumns(2, 3);
+    if(ExampleSpread.getCellAt(1, 2) !== "World" && ExampleSpread.getCellAt(1, 3) !== "Hello") {
+        console.log("Test TestswapRows() failed !!!");
+    } else {
+        console.log("Test TestswapRows() passed ");
+    }
+}
 
 
 

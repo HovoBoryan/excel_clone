@@ -81,18 +81,47 @@ class SpreadSheet {
 
     removeColumn(num) {
       if(num < 0) {
+
          console.log("Please enter number 0 or greater then !!!!.. ");
+
       } else {
+
          let row = this.#Cells.length;
-         for(let i = 0; i < row; i++) {     
-         this.#Cells[i].splice(num , 1); 
+         for(let i = 0; i < row; i++) {   
+
+             this.#Cells[i].splice(num , 1); 
       }
    }
-    }
-    swapRows(num1, num2) {
+
 
     }
+
+
+    swapRows(num1, num2) {
+      if(num1 < 0 || num2 < 0) {
+
+         console.log("Please enter number 0 or greater then !!!!.. ");
+
+      } else {
+         const swapper = this.#Cells[num1];
+         this.#Cells[num1] = this.#Cells[num2];
+         this.#Cells[num2] = swapper;
+      }
+   }
+
+
+
     swapColumns(num1, num2) {
+      
+      if(num1 < 0 || num2 < 0) {
+
+         console.log("Please enter number 0 or greater then !!!!.. ");
+
+      } else {
+         const swapper = this.#Cells[num1];
+         this.#Cells[num1] = this.#Cells[num2];
+         this.#Cells[num2] = swapper;
+      }
 
     }
 

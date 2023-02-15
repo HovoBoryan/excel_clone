@@ -118,7 +118,6 @@ function TestaddColumn() {
 
 }
 
-
 function TestremoveColumn() {
     const cell = new Cell();
     const ExampleSpread = new SpreadSheet(3, 3, cell);
@@ -133,6 +132,20 @@ function TestremoveColumn() {
 
         console.log("Test removeRow() passed ");
     }      
+}
+
+function TestswapRows() {
+
+    const cell = new Cell();
+    const ExampleSpread = new SpreadSheet(4, 4, cell);
+    ExampleSpread.setCellAt(1, 1, "Hello");
+    ExampleSpread.setCellAt(3, 3, "World");
+    ExampleSpread.swapRows(1, 3);
+    if(ExampleSpread.getCellAt(1, 3) !== "World" && ExampleSpread.getCellAt(3, 1) !== "Hello") {
+        console.log("Test TestswapRows() failed !!!");
+    } else {
+        console.log("Test TestswapRows() passed ");
+    }
 }
 
 
@@ -153,10 +166,11 @@ function TestAllTests() {
     TestSetCellAt();
     TestAddRow();
     TestRemoveRow();
-    TestaddColumn()
+    TestaddColumn();
+    TestremoveColumn()
 
     };
 
 // TestAllTests();
-TestremoveColumn()
+TestswapRows();
 

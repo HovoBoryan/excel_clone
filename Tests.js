@@ -82,12 +82,10 @@ function TestSetCellAt() {
 function TestAddRow() {
     const cell = new Cell();
     const ExampleSpread = new SpreadSheet(3, 3, cell);
-    
     ExampleSpread.setCellAt(1, 1, "Hello");
     ExampleSpread.setCellAt(2, 2, "World");
     ExampleSpread.addRow(1);
-   
-    if(ExampleSpread.getCellAt(1, 1) !== "Hello" ) {
+    if(ExampleSpread.getCellAt(3, 2) !== "World" ) {
         console.log("Test addRow() failed !!!..");
     } else {
         console.log("Test addRow() passed ");

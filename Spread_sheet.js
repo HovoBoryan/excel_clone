@@ -16,8 +16,8 @@ class SpreadSheet {
         for(let i = 0; i < row; i++) {
             for(let j = 0; j < col; j++) {
                this.#Cells[i][j] = cell;
-            }
-      }
+         }  
+       }
     }
 }
     setCellAt(num1, num2, value) {
@@ -54,9 +54,11 @@ class SpreadSheet {
     addRow(num) {
         let col = this.#Cells[0].length;
         const cell = new Cell();
-        const addLine = new SpreadSheet(1, col, cell );
-             this.#Cells.splice(num , 0, addLine );
-             return this.#Cells;
+        const addLine = [col];
+        for(let i = 0; i < col; i++) {
+         addLine[i] = cell;
+      }
+             this.#Cells.splice(num + 1 , 0, addLine );
       }
 
 

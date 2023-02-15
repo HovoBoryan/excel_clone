@@ -13,6 +13,11 @@ class SpreadSheet {
         for(let i = 0; i < row; i++) {
            this.#Cells[i] = new Array(col);   
         }
+        for(let i = 0; i < row; i++) {
+            for(let j = 0; j < col; j++) {
+               this.#Cells[i][j] = cell;
+            }
+      }
     }
 }
     setCellAt(num1, num2, value) {
